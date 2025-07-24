@@ -147,8 +147,10 @@ void loop()
       Serial.print(fixajSerial.read(), DEC);
     }
     Serial.println(".");
-    if(command == LORA_EMERGENCY){
+    if (command == LORA_EMERGENCY)
+    {
       digitalWrite(ROLE_PIN, HIGH);
+      Serial.println("EMERGENCY BUTTON PRESSED - ROLE HIGH !!!");
     }
     kanalBekleme_sure_RESTART = millis(); // yeniden başlatmayı durdur
   }
